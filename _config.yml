@@ -1,0 +1,21 @@
+title: octotrike.org
+author: trikers
+logo: images/octotrike_logo.png
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "talks"
+    values:
+      layout: "talk"
+collections:
+  talks:
+    output: true
+  faq:
+plugins:
+  - jekyll-seo-tag

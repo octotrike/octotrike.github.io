@@ -1,0 +1,12 @@
+- name: Home
+  link: /
+- name: Docs
+  link: /docs
+- name: Tools
+  link: /tools
+- name: Papers
+  link: /papers
+- name: Talks
+  link: /talks
+- name: Contact
+  link: /contact

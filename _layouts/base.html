@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	{% seo %}
+	<meta name="KeyWords" content="trike, threat, threat modeling, threat modelling, attack tree, attack graph, security, computer security, risk">
+	<title>Trike: {{ page.title | default: site.title }}</title>
+	<link href="{{ "/assets/css/layout.css?v=" | append: site.github.build_revision | relative_url }}" rel="stylesheet" media="screen">
+	<link href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}" rel="stylesheet" media="screen">
+</head>
+<body>
+<div id="box">
+	<div id="hdr">
+		<a href="{{ "/" | relative_url }}"><span style="color: #A1A1A1;">Octo</span>trike<span style="color: #A1A1A1;">.org</span></a>
+	</div>
+	<div id="nbr">
+
+	{% for item in site.data.navigation %}<a class="nbritem" href="{{ item.link | relative_url }}"> {{ item.name }}</a>{% endfor %}
+	</div>
+	<table class="main" cellspacing="0">
+
+	<tr><td id="content">
+{{ content }}
+
+<br><br>
+	</td><td id="newscol">
+		<div id="contentbox">
+			<div id="contentboxhdr">
+				Octopus
+			</div>
+<p align="center">
+<img src="{{ "/images/octotrike_logo.png" | relative_url }}" width="220" height="271" alt="" border="0">
+</p>
+		</div>
+
+		<div id="contentbox">
+			<div id="contentboxhdr">
+				Download
+			</div>
+			<p>
+			<a href="{{ site.baseurl }}{% link tools.md %}#spreadsheet">Spreadsheet</a><br>
+			<a href="{{ site.basurl }}{% link tools.md %}#standalone">Standalone Tool</a><br>
+			</p>
+		</div>
+
+	</td></tr></table>
+
+	<div id="ftr">
+Copyright &copy; 2004-2008 Brenda Larcom, Eleanor Saitta, and Stephanie Smith. Copyright &copy; 2009-2012 Brenda Larcom and Eleanor Saitta. All rights reserved.
+	</div>
+</div>
+</body>
+</html>

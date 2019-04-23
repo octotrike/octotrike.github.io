@@ -1,0 +1,127 @@
+assets
+ denial of service
+    goal: prevent legitimate crud
+      change system state such that action is meaningless or prohibited
+        take an action in the system which changes the conditions a rule depends on
+	  take an intended action which changes a condition
+          effect another threat which changes a condition
+        reverse the action immediately after it occurs
+      prevent rules for action from passing when they should 
+      disrupt the DFD elements for this action
+        prevent endpoints of a data flow from creating or reading data
+	create, update or delete data on a data flow
+	prevent process from performing its usual function
+	prevent legitimate process from crudding data on a data store
+	create, update or delete data on a data store
+	prevent actor from attempting action
+  elevation of privilege
+    goal: crud when you oughtn't
+      cause rules to pass when they shouldn't
+      change system state such that action is allowed
+        take an action in the system which changes the conditions a rule depends on
+      subvert the DFD elements for this action
+        crud data on a data flow
+	crud data on a data store
+	cause a process to perform this action
+	cause a legitimate actor to perform this action
+
+rules
+  goal: rule doesn't pass when conditions are met
+    state machine enforced rules:
+      attack the state transitions for the desired state
+        prevent transition to a required state
+        cause transition to a prohibited state
+      attack the state element for the desired state
+        remove a required state without a transition
+	add a prohibited state without a transition
+    directly enforced rules:
+      attack the inputs to the DFD process that checks the rule
+        create, update, or delete data on a data flow
+        create, update, or delete data on a data store
+      attack the DFD process that checks the rule
+	cause the process that checks the rule to fail despite the conditions
+	prevent legitimate process from crudding data on a data store
+      attack the outputs from the DFD process that checks the rule
+        create, update, or delete data on a data flow
+        create, update, or delete data on a data store
+  goal: rule passes when conditions aren't met
+    state machine enforced rules:
+      attack the state transitions for the desired state
+        cause rules to pass for a transition when they shouldn't
+	cause a transition to add a state it normally doesn't
+      attack the state element for the desired state
+        add a required state without a transition
+	remove a prohibited state without a transition
+    directly enforced rules:
+      attack the inputs to the DFD process that checks the rule
+        create, update, or delete data on a data flow
+	create, update, or delete data on a data store
+      attack the DFD process that checks the rule
+	cause the process that checks the rule to pass despite the conditions
+      attack the outputs from the DFD process that checks the rule
+        create, update, or delete data on a data flow
+	create, update, or delete data on a data store
+
+elements of state machine
+  state
+    goal: stop being in state without traversing a transition
+      attack the DFD elements that control this state
+        create, read, or update data on a data flow
+	create, read, or update data on a data store
+	cause a process to remove this state
+	cause the process that checks for the state to report the absence of the state
+	cause a legitimate actor to change this state
+    goal: be in state without traversing a transition
+      attack the DFD elements that control this state
+        create, read, or update data on a data flow
+	create, read, or update data on a data store
+	cause a process to add this state
+	cause the process that checks for the state to report the presence of the state
+	cause a legitimate actor to change this state
+  transition
+    goal: prevent transition when required by rules
+      prevent rules for transition from passing when they should
+      disrupt the DFD for this transition
+        prevent endpoints of a data flow from creating or reading data
+	create, update or delete data on a data flow
+	prevent process from performing its usual function
+	prevent legitimate process from crudding data on a data store
+	create, update or delete data on a data store
+	prevent actor from attempting action
+    goal: cause transition not according to rules
+      subvert the DFD for this transition
+        crud data on a data flow
+	crud data on a data store
+	cause a process to perform extra functions
+	prevent a gatekeeper process from performing its usual function
+	cause a legitimate actor to perform this action
+
+DFD elements
+  data flow
+    goal: prevent legitimate endpoint from creating or reading data
+    goal: create, update, or delete flowing data
+    goal: read flowing data
+  process
+    goal: prevent process from performing its usual function
+    goal: cause process to perform extra functions
+  data store
+    goal: prevent legitimate process from crudding data
+    goal: create, update, or delete data directly
+    goal: read data directly
+  actor
+    goal: prevent actor from ...
+      disrupt information regarding ...
+        deny service to information regarding ...
+        alter information regarding ...
+        publish incorrect information regarding ...
+      persuade actor not to attempt ...
+    goal: cause actor to ...
+      disrupt information regarding ... or something related
+        alter information regarding ...
+        publish incorrect information regarding ...
+      persuade actor to attempt ...
+
+
+
+
+
