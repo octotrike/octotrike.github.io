@@ -1,0 +1,138 @@
+.mozilla_bug {}
+
+a, a:link, a:visited {
+	text-decoration:	none;
+	color:				#770000;
+}
+
+a:link:hover, a:visited:hover {
+	text-decoration:	none;
+	color:				#CC0000;
+}
+
+body {
+	background: 		#FFFFFF;		/* white		*/
+	color: 				#404040;		/* dark grey	*/
+	font-size: 			13px;
+	font-family:		arial, sans-serif;
+}
+
+.faqquestion {
+	color: #770000;
+}
+
+.faqanswser {
+}
+
+#ftr {
+	background: 		#F21414;		/* red 			*/
+	background: 		#E5E5E5;		/* light grey 	*/
+	font-size:			11px;
+	border-top: 		1px solid #909090;;
+	
+}
+
+#hdr {
+	background:			#770000;
+	color: 				#FFFFFF;		
+	font-family:		"Trebuchet MS", Helvetica, Arial, sans-serif;
+	font-size:			40px;
+	text-shadow:		2px 2px 3px #303030;
+	text-transform:		lowercase;
+	font-weight:		bold;
+	vertical-align: 	bottom;
+}
+
+#hdr a:link, #hdr a:visited { 
+	color:				#FFFFF3;
+}
+
+#nbr {
+	background: 		#770000;
+	border-bottom:		1px solid #330000;
+}	
+
+.nbritem, .nbritemsel {
+	text-decoration:	none;
+	border: 1px solid black;
+	/*text-transform:		lowercase;*/
+}
+
+.nbritem:link, .nbritem:visited, a.nbritem {
+	color:				#FFFFFF;
+	background:			#440000;
+	background:			#A1A1A1;
+	background:			#CC0000;
+	text-decoration:	none;
+}
+
+.nbritem:hover, .nbritem:visited:hover, a.nbritem:hover {
+	color:				white;
+	background:			#440000;
+	text-decoration:	none;
+	background:			#A1A1A1;
+	color:				black;
+}
+
+.nbritemsel {
+	background:			white;
+	border-bottom:		1px solid white;
+	color: 				#303030;
+}
+
+.nbritemsel:link, .nbritemsel:visited, a.nbritemsel,
+.nbritemsel:hover, .nbritemsel:visited:hover, a.nbritemsel:hover {
+	color:				#303030;
+	text-decoration:	none;
+	cursor:				default;
+}
+
+#title {
+	font-weight:		bold;
+	font-size:			30px;
+	font-family:		"Trebuchet MS", Helvetica, Arial, sans-serif;
+	border-bottom: 		2px solid #909090;
+	color:				#990000;		/* red			*/
+	/*text-transform:		lowercase;*/
+}
+
+table.main {
+	border-left:	1px solid #330000;
+}
+
+#content {
+	vertical-align:	top;
+}
+
+#contenthdr {
+	font-weight:		bold;
+	font-size:			20px;
+	color: #505050;
+	margin-top: 10px;
+}
+
+#newscol {
+	vertical-align: 	top;
+}
+
+#contentbox {
+	border-bottom: 1px solid #909090;;
+	background:			#E5E5E5;	
+}
+
+#contentbox p {
+	border-top: 1px solid #909090;
+}
+
+#contentbox p b {
+	color:	#770000;
+}
+
+#contentboxhdr {
+	background:			#770000;
+	font-weight:		bold;
+	color: white;
+	/*text-transform: lowercase;*/
+	border: 1px solid #330000;
+	border-bottom: none;
+}
