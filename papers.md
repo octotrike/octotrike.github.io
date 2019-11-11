@@ -40,6 +40,6 @@ attribution-noncommercial-sharealike 2.0 license</a>.
 </p>
 </dd>
   </div>
-<p>
-[Download]({{ "/papers/Trike_v1_Methodology_Document-draft.pdf" | relative_url }})
-</p>
+
+<a href="{{ "/papers/Trike_v1_Methodology_Document-draft.pdf" | relative_url }}">Download</a>
+</dl>
